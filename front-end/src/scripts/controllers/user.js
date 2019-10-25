@@ -47,6 +47,7 @@ class User{
         let that = this
         $('#login-from')[0].reset()
 
+        
         if( result.data.type ){
             let html = navView({
                 isLogin : true
