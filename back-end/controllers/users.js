@@ -1,5 +1,6 @@
 const userModel = require('../models/users')
 const tools = require('../utils/tools')
+const authMiddleware = require('../middlewares/state')
 
 // 用户注册，向数据库中加数据
 const signup = async function(req,res,next){
@@ -77,11 +78,14 @@ const signin = async function(req,res,next){
     if( result ){
         let CompareResult =  await tools.compare(password,result.password)
         if(CompareResult){
+            // 设置session
+            req.session.username = username
+
             res.render('succ',{
                 data: JSON.stringify({
                     type:'true',
                     message: '恭喜您,登录成功~!',
-                    name : username
+                    username,
                 })
             })
         }else{
@@ -101,8 +105,24 @@ const signin = async function(req,res,next){
 
 }
 
+// 检测用户登录状态
+const isSignin = authMiddleware
+
+// 用户注销/退出操作
+const signout = function(req,res,next){
+    
+    req.session = null
+    res.render('succ',{
+        data:JSON.stringify({
+            message: '注销成功'
+        })
+    })
+}
+
 module.exports = {
     signup,
     hasUsername,
-    signin
+    signin,
+    isSignin,
+    signout
 }

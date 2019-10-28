@@ -6,24 +6,24 @@
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
 
-            <li>
-                <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+            <li data-url="home" class="active-menu">
+                <a  href="#/home"><i class="fa fa-dashboard"></i> Dashboard</a>
+            </li>
+            <li data-url="position" >
+                <a href="#/position"><i class="fa fa-desktop"></i> UI Elements</a>
             </li>
             <li>
-                <a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
+                <a href="#"><i class="fa fa-bar-chart-o"></i> Charts</a>
             </li>
             <li>
-                <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Charts</a>
-            </li>
-            <li>
-                <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
+                <a href="#"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
             </li>
             
             <li>
-                <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
+                <a href="#"><i class="fa fa-table"></i> Responsive Tables</a>
             </li>
             <li>
-                <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
+                <a href="#"><i class="fa fa-edit"></i> Forms </a>
             </li>
 
 
@@ -73,10 +73,10 @@
                     Dashboard <small>Summary of your App</small>
                 </h1>
                 <ol class="breadcrumb">
-<li><a href="#">Home</a></li>
-<li><a href="#">Library</a></li>
-<li class="active">Data</li>
-</ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
             </div>
         </div>
         

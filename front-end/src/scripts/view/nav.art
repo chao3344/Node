@@ -238,9 +238,15 @@
     </li>
     <!-- /.dropdown -->
     <li class="dropdown">
+        {{if isLogin}}
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down user-name">{{username}}</i>
+        </a>
+        {{else}}
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
             <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down user-name"></i>
         </a>
+        {{/if}}
         <ul class="dropdown-menu dropdown-user">
             {{if isLogin}}
                 <li><a href="#"><i class="fa fa-user fa-fw"></i>用户资料</a>
@@ -248,7 +254,7 @@
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i>设置</a>
                 </li>
                 <li class="divider"></li>
-                <li class="login-quit"><a href="#"><i class="fa fa-sign-out fa-fw"></i>退出</a>
+                <li class="login-quit"><a href="javascript:;"><i class="fa fa-sign-out fa-fw"></i>退出</a>
                 </li>
             {{else}}
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i>设置</a>

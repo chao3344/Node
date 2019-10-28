@@ -3,33 +3,58 @@ import navView from '../view/nav.art'
 import httpModel from '../models/http'
 class User{
     constructor(){
+        
         this.render()
-        this.LoginRegist()
+        
+        
         this.id = ''
+        this.isSignin = false
+        this.username = ''
         
     }
-    render(){
+    async render(){
+        
+        await this.state()
+        
         
         let html = navView({
-            isLogin : false
+            isLogin : this.isSignin,
+            username: this.username
         })
-        $('#nav').html(html)  
-       
+        $('#nav').html(html) 
+
+        this.LoginRegist() 
+        
+        // 利用事件委托，解决第一次登录后无法退出的问题
+        $('#wrapper').on('click','.login-quit',async function(){
+            
+            let result = await httpModel.get({
+                url: '/api/users/signout'
+            })
+            
+            if( result.ret ){
+                location.reload()
+            }
+        })
+        
     }
+
 
     LoginRegist(){
         let that = this
         // 把id传入看用户究竟点击的是哪个按钮
         $('#btn-register').on('click',function(){
             that.id = $(this).attr('id')
+            console.log(that.id)
+            that.handleSubmit()
         })
         $('#btn-login').on('click',function(){
             that.id = $(this).attr('id')
+            console.log('denglu')
+            that.handleSubmit()
         })
 
-        // 提交数据
-        $('#btn-login').on('click',this.handleSubmit.bind(this))
-        $('#btn-register').on('click',this.handleSubmit.bind(this))
+       
     }
 
     async handleSubmit(url){
@@ -39,7 +64,8 @@ class User{
         let result = await httpModel.get({
             // this.id表示用户点击登录或注册
             url :this.id === 'btn-login'?'/api/users/signin':'/api/users/signup',
-            data
+            data,
+            type: 'POST'
         })
         this.handleSubmitSucc(result)
     }
@@ -49,23 +75,40 @@ class User{
 
         
         if( result.data.type ){
+            
             let html = navView({
-                isLogin : true
+                isLogin : true,
+                username : result.data.username
             })
+            
             $('#nav').html(html)
             $('#login-li').removeClass('open')
-            $('.user-name').text()
+            
+            
+            
         }
         
         $('.login-box-title').html(result.data.message)
-        $('.user-name').text(result.data.name)
+        
+        // $('.user-name').text(result.data.name)
         
         $('#login-li').addClass('open')
-        $('.login-quit').on('click',function(){
-            that.render()
-            that.LoginRegist()
-            
+        
+        
+    }
+
+    // 检测用户现在的状态是登录还是未登录
+    async state(){
+        
+        let result = await httpModel.get({
+            url: '/api/users/isSignin'
         })
+        
+        let username = result.data.username
+        this.isSignin = username ? true : false
+        this.username = username
+        
+        
     }
 }
 
