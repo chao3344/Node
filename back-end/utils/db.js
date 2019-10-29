@@ -7,7 +7,18 @@ const Users = mongoose.model('users',{
     password: String
 })
 
+// 新建一个数据表，用来存储positions中的房间记录
+const Positions = mongoose.model('position',{
+    positionName : String,
+    positionIDcard: String,
+    positionTime: String,
+    positionHouse: String,
+    positionDay: String,
+    positionMoney: String
+})
+
 module.exports = {
-    Users
+    Users,
+    Positions
 }
 

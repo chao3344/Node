@@ -22,9 +22,12 @@ const compare = (password,hash)=>{
       })
 }
 
+
+
 const generateToken = (username)=>{
     return new Promise((resolve,reject) =>{
-        let cert = fs.readFile(path.resolve(__dirname,'../key/rsa_private_key.pem'))
+        // 改为同步事件，等读取完文件后在执行以下操作
+        let cert = fs.readFileSync(path.resolve(__dirname,'../key/rsa_private_key.pem'))
         jwt.sign(
             {
                 username
@@ -41,7 +44,7 @@ const generateToken = (username)=>{
 
 const verifyToken = (token) => {
     return new Promise((resolve,reject) =>{
-        let cert = fs.readFileSync(path,resolve(__dirname,'../key/rsa_public_key.pem'))
+        let cert = fs.readFileSync(path.resolve(__dirname,'../key/rsa_public_key.pem'))
         jwt.verify(token,cert,(err,decoded) =>{
             resolve(decoded)
         })

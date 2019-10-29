@@ -10,9 +10,12 @@ router.use((req) => {
     $(`.sidebar-collapse ul li[data-url=${url}]`).addClass('active-menu').siblings().removeClass('active-menu')
 })
 
+window.route = router
+
 router.route('/home',home)
 
 router.route('/position',position.list)
+router.route('/position_add',position.add)
 
 router.route('*', (req, res, next) => {
     res.redirect('/home')

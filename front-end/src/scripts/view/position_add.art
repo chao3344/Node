@@ -1,0 +1,34 @@
+<div class="col-md-12">
+    <h1 class="page-header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        登记入住</font></font><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登记入住</font></font></small>
+    </h1>
+</div>
+
+<form role="form">
+    <div class="form-group has-success">
+        <label class="control-label" for="inputSuccess"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住人</font></font></label>
+        <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group has-warning">
+        <label class="control-label" for="inputWarning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">身份证号码</font></font></label>
+        <input type="text" class="form-control" id="IDcard">
+    </div>
+    <div class="form-group has-error">
+        <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住时间</font></font></label>
+        <input type="text" class="form-control" id="InTime">
+    </div>
+    <div class="form-group has-error">
+        <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住房间</font></font></label>
+        <input type="text" class="form-control" id="InHouse">
+    </div>
+    <div class="form-group has-error">
+        <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住天数</font></font></label>
+        <input type="text" class="form-control" id="InDay">
+    </div>
+    <div class="form-group has-error">
+        <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实付金额</font></font></label>
+        <input type="text" class="form-control" id="InMoney">
+    </div>
+    <a href="javascript:;" class="btn btn-success sure"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">确定</font></font></a>
+    <a href="javascript:;" class="btn btn-success quit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">返回</font></font></a>
+</form>

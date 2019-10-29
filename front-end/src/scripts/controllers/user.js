@@ -1,6 +1,8 @@
 import navView from '../view/nav.art'
-
+import store from 'store'
 import httpModel from '../models/http'
+
+
 class User{
     constructor(){
         
@@ -28,13 +30,16 @@ class User{
         // 利用事件委托，解决第一次登录后无法退出的问题
         $('#wrapper').on('click','.login-quit',async function(){
             
-            let result = await httpModel.get({
+            store.remove('token')
+            location.reload()
+            
+            /* let result = await httpModel.get({
                 url: '/api/users/signout'
             })
             
             if( result.ret ){
                 location.reload()
-            }
+            } */
         })
         
     }
@@ -105,8 +110,10 @@ class User{
         })
         
         let username = result.data.username
+        
         this.isSignin = username ? true : false
         this.username = username
+        
         
         
     }

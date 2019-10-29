@@ -78,9 +78,14 @@ const signin = async function(req,res,next){
     if( result ){
         let CompareResult =  await tools.compare(password,result.password)
         if(CompareResult){
-            // 设置session
-            req.session.username = username
+            //  设置session
+            // req.session.username = username
 
+            let token = await tools.generateToken(username)
+            // 使用token方式来完成登录注册
+            // 向headers注入一个字段，将token传给前端
+            res.header('X-Access-Token',token)
+            
             res.render('succ',{
                 data: JSON.stringify({
                     type:'true',
