@@ -84,7 +84,11 @@ const signin = async function(req,res,next){
             let token = await tools.generateToken(username)
             // 使用token方式来完成登录注册
             // 向headers注入一个字段，将token传给前端
-            res.header('X-Access-Token',token)
+            // res.header('X-Access-Token',token)
+
+            // 向浏览器中种cookie
+            res.cookie('token',token)
+            res.cookie('username',username)
             
             res.render('succ',{
                 data: JSON.stringify({

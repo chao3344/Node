@@ -1,0 +1,5 @@
+<div class="col-md-12">
+    <h1 class="page-header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        {{title.title}}</font></font><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{title.subtitle}}</font></font></small>
+    </h1>
+</div>

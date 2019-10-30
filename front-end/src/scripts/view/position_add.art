@@ -4,31 +4,42 @@
     </h1>
 </div>
 
-<form role="form">
-    <div class="form-group has-success">
+<form 
+    role="form" 
+    id="position-add-form"
+    method="post"
+    action="api/position"
+    enctype="multipart/form-data"
+
+>
+    <div class="form-group has-success ">
+        <label class="control-label" for="inputSuccess"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">客房照片</font></font></label>
+        <input type="file" class="form-control" id="position-img" name="positionImg">
+    </div>
+    <div class="form-group has-success addname">
         <label class="control-label" for="inputSuccess"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住人</font></font></label>
-        <input type="text" class="form-control" id="name">
+        <input type="text" class="form-control" id="name" name="positionName">
     </div>
-    <div class="form-group has-warning">
+    <div class="form-group has-warning addIDcard">
         <label class="control-label" for="inputWarning"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">身份证号码</font></font></label>
-        <input type="text" class="form-control" id="IDcard">
+        <input type="text" class="form-control" id="IDcard" name="IDcard">
     </div>
-    <div class="form-group has-error">
+    <div class="form-group has-error addInTime">
         <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住时间</font></font></label>
-        <input type="text" class="form-control" id="InTime">
+        <input type="text" class="form-control" id="InTime" name="InTime">
     </div>
-    <div class="form-group has-error">
+    <div class="form-group has-error addInHouse">
         <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住房间</font></font></label>
-        <input type="text" class="form-control" id="InHouse">
+        <input type="text" class="form-control" id="InHouse" name="InHouse">
     </div>
-    <div class="form-group has-error">
+    <div class="form-group has-error addInDay">
         <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住天数</font></font></label>
-        <input type="text" class="form-control" id="InDay">
+        <input type="text" class="form-control" id="InDay" name="InDay">
     </div>
-    <div class="form-group has-error">
+    <div class="form-group has-error addInMoney">
         <label class="control-label" for="inputError"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实付金额</font></font></label>
-        <input type="text" class="form-control" id="InMoney">
+        <input type="text" class="form-control" id="InMoney" name="InMoney">
     </div>
-    <a href="javascript:;" class="btn btn-success sure"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">确定</font></font></a>
-    <a href="javascript:;" class="btn btn-success quit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">返回</font></font></a>
+    <button type="submit" class="btn btn-success btn-add-sure">确定</button>
+    <a href="javascript:;" class="btn btn-success btn-add-quit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">返回</font></font></a>
 </form>

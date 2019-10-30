@@ -14,6 +14,7 @@ const hash = (password) =>{
     })
 }
 
+// 比较输入密码是否与数据库中保存的数据一致
 const compare = (password,hash)=>{
     return new Promise((resolve, reject) => {
         bcrypt.compare(password, hash, function(err, res) {

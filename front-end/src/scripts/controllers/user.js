@@ -30,16 +30,16 @@ class User{
         // 利用事件委托，解决第一次登录后无法退出的问题
         $('#wrapper').on('click','.login-quit',async function(){
             
-            store.remove('token')
-            location.reload()
+            // store.remove('token')
+            // location.reload()
             
-            /* let result = await httpModel.get({
+            let result = await httpModel.get({
                 url: '/api/users/signout'
             })
             
             if( result.ret ){
                 location.reload()
-            } */
+            }
         })
         
     }
@@ -50,12 +50,12 @@ class User{
         // 把id传入看用户究竟点击的是哪个按钮
         $('#btn-register').on('click',function(){
             that.id = $(this).attr('id')
-            console.log(that.id)
+            
             that.handleSubmit()
         })
         $('#btn-login').on('click',function(){
             that.id = $(this).attr('id')
-            console.log('denglu')
+            
             that.handleSubmit()
         })
 
@@ -111,12 +111,14 @@ class User{
         
         let username = result.data.username
         
-        this.isSignin = username ? true : false
+        this.isSignin = username ? true : false 
         this.username = username
         
         
         
     }
+
+
 }
 
 export default new User()

@@ -1,6 +1,6 @@
 <div class="col-md-12">
     <h1 class="page-header"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-        房间管理</font></font><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是您房间管理部分</font></font></small>
+        房间管理</font></font><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">House Administration</font></font></small>
     </h1>
 </div>
 
@@ -13,36 +13,87 @@
             </font></font></div>
             <div class="panel-body">
                 <div class="table-responsive">
-                    <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="dataTables-example_length"><label><select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm"><option value="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></option><option value="25"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25</font></font></option><option value="50"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">50</font></font></option><option value="100"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100</font></font></option></select><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 每页记录</font></font></label></div></div><div class="col-sm-6"><div id="dataTables-example_filter" class="dataTables_filter"><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索：</font></font><input type="search" class="form-control input-sm" aria-controls="dataTables-example"></label></div></div></div><table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" aria-describedby="dataTables-example_info">
+                    <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="row">
+                        <div class="col-sm-6"><div class="dataTables_length" id="dataTables-example_length"><label><select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm"><option value="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></option><option value="25"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25</font></font></option><option value="50"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">50</font></font></option><option value="100"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100</font></font></option></select><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 每页记录</font></font></label></div></div>
+                        <div class="col-sm-6"><div id="dataTables-example_filter" class="dataTables_filter"><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">搜索：</font></font><input type="search" class="form-control input-sm position-search" aria-controls="dataTables-example"></label></div></div></div><table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" aria-describedby="dataTables-example_info">
                         <thead>
                             <tr role="row">
+                                    <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 248px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">房间图片</font></font></th>
                                 <th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending" style="width: 167px;" aria-sort="ascending"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住人</font></font></th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 248px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">身份证号码</font></font></th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 248px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住时间</font></font></th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 232px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住房间</font></font></th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 140px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入住天数</font></font></th>
-                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 99px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实付金额</font></font></th></tr>
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 99px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实付金额</font></font></th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 99px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操作</font></font></th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 99px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></th></tr>
                         </thead>
                         <tbody>
-                       
+                       {{each list}}
                         <tr class="gradeA odd">
-                                <td class="sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">小李</font></font></td>
-                                <td class="sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">410522xxxxxxxxxxxx</font></font></td>
-                                <td class=" "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019-10-28-19:53</font></font></td>
-                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">双人间</font></font></td>
-                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1天</font></font></td>
-                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">99元</font></font></td>
-                                <td class="btn btn-danger" style="margin-left: 10px;"><i class="fa fa-pencil"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 删除</font></font></td>
-                            </tr><tr class="gradeA even">
-                                <td class="sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">小红</font></font></td>
-                                <td class="sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">410522xxxxxxxxxxxx</font></font></td>
-                                <td class=" "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019-10-28-20:02</font></font></td>
-                                <td class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">大床房</font></font></td>
-                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2天</font></font></td>
-                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">199元</font></font></td>
-                                <td class="btn btn-danger" style="margin-left: 10px;"><i class="fa fa-pencil"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 删除</font></font></td>
-                            </tr></tbody>
-                    </table><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="dataTables-example_info" role="alert" aria-live="polite" aria-relevant="all"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">显示入住房间中的1到10</font></font></div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上一页</font></font></a></li><li class="paginate_button active" aria-controls="dataTables-example" tabindex="0"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1个</font></font></a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></a></li><li class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下一页</font></font></a></li></ul></div></div></div></div>
+                                <td class="sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><img src="http://localhost:3000/uploads/{{$value.positionImg}}" alt="" style="height: 60px; width: 60px;"></font></font></td>
+                                <td class="sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$value.positionName}}</font></font></td>
+                                <td class="sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$value.IDcard}}</font></font></td>
+                                <td class=" "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$value.InTime}}</font></font></td>
+                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$value.InHouse}}</font></font></td>
+                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$value.InDay}}</font></font></td>
+                                <td class="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{$value.InMoney}}</font></font></td>
+                                <td class="center"><button class="btn btn-primary btn-position-update" data-id="{{$value._id}}" type="button"><i class="fa fa-edit "></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 编辑</font></font></button></td>
+                                <td class="center"><button class="btn btn-danger btn-position-delete" data-id="{{$value._id}}" type="button"><i class="fa fa-pencil"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 删除</font></font></button></td>
+                        </tr>
+                        {{/each}}
+                        </tbody>
+                    </table><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="dataTables-example_info" role="alert" aria-live="polite" aria-relevant="all"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">显示入住房间中的1到10</font></font></div></div>
+                            <div class="col-sm-6">
+                                <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0"
+                                            id="dataTables-example_previous"><a href="#">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">上一页</font>
+                                                </font>
+                                            </a></li>
+                                        <li class="paginate_button active" aria-controls="dataTables-example" tabindex="0"><a href="#">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">1</font>
+                                                </font>
+                                            </a></li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">2</font>
+                                                </font>
+                                            </a></li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">3</font>
+                                                </font>
+                                            </a></li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">4</font>
+                                                </font>
+                                            </a></li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">5</font>
+                                                </font>
+                                            </a></li>
+                                        <li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">6</font>
+                                                </font>
+                                            </a></li>
+                                        <li class="paginate_button next" aria-controls="dataTables-example" tabindex="0"
+                                            id="dataTables-example_next"><a href="javascript:;">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">下一页</font>
+                                                </font>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <a href="javascript:;" class="btn btn-warning position-btn-quit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">取消</font></font></a>
                 <a href="javascript:;" class="btn btn-warning position-btn-add"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">添加</font></font></a>

@@ -7,10 +7,10 @@
         <ul class="nav" id="main-menu">
 
             <li data-url="home" class="active-menu">
-                <a  href="#/home"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a  href="#/home"><i class="fa fa-dashboard"></i> 主页</a>
             </li>
             <li data-url="position" >
-                <a href="#/position"><i class="fa fa-desktop"></i> UI Elements</a>
+                <a href="#/position"><i class="fa fa-desktop"></i> 房间管理</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o"></i> Charts</a>
@@ -63,7 +63,12 @@
 
 </nav>
 <!-- /. NAV SIDE  -->
+<!-- /. Title -->
+
+
+<!-- /. Content -->
 <div id="page-wrapper">
+        
     <div id="page-inner" style="display: none;">
 
 
